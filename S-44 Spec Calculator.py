@@ -46,7 +46,7 @@ class Order:
     def BathymetricCoverage(self): #prints bathymetric coverage from the dictionary based on the instance (see [2])
         print(f"Bathymetric Coverage criteria is: {self.Bathymetric_Coverage}")
         
-classinput = input("Select Order (Accepts EO, SO, 1A, 1B, 2):") #user states desired order version
+classinput = input("Select Order (Type EO, SO, 1A, 1B, or 2) (Note: O is the LETTER O):") #user states desired order version
 
 #instance variable format for below is: a, b, perdep. AreaDesc, Depth_THU(Percentage), Depth_TVU, Feature_Detec, Feature_Search, Bathymetric Coverage
 #dictionary reference format is AD, FD, FS, BC
@@ -67,8 +67,8 @@ elif classinput == "2":
     order = Order(1, 0.023, 1.10, OT["AD"], 20, 0, OT["FD"], OT["FS"], OT["BC"])
     order.AreaDescription(), order.DepthTHU(), order.DepthTVU(), order.FeatureDetection(), order.FeatureSearch(), order.BathymetricCoverage()
 else:
-    print("Wrong input. Type either EO, SO, 1A, 1B, 2") #error check in case anything but the above instance strings are input by the user in classinput
+    print("Wrong input. Type either EO, SO, 1A, 1B, or 2") #error check in case anything but the above instance strings are input by the user in classinput
     pass
 
-
+input("\nComplete! Press any key to exit...")
 
